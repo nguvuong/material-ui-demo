@@ -29,8 +29,13 @@ const logoStyle = {
   opacity: 0.7,
 };
 
+// good for giving the logo for the sponser   
+
 export default function LogoCollection() {
+  // create theme
   const theme = useTheme();
+
+  // logos according the theme
   const logos = theme.palette.mode === 'light' ? darkLogos : whiteLogos;
 
   return (
@@ -43,7 +48,10 @@ export default function LogoCollection() {
       >
         Trusted by the best companies
       </Typography>
+
+      {/* grid */}
       <Grid container justifyContent="center" sx={{ mt: 0.5, opacity: 0.6 }}>
+
         {logos.map((logo, index) => (
           <Grid item key={index}>
             <img
@@ -54,6 +62,8 @@ export default function LogoCollection() {
           </Grid>
         ))}
       </Grid>
+
+
     </Box>
   );
 }

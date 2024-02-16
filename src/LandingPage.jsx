@@ -100,6 +100,8 @@ export default function LandingPage() {
 
             {/* kickstart an elegant, consistent, and simple baseline to build upon. */}
             <CssBaseline enableColorScheme />
+
+
             <AppAppBar mode={mode} toggleColorMode={toggleColorMode} />
             <Hero />
 

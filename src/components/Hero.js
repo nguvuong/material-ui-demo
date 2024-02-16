@@ -46,6 +46,8 @@ export default function Hero() {
             <Typography
               component="span"
               variant="h1"
+
+              // change the color based on theme 
               sx={{
                 color: (theme) =>
                   theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',
@@ -63,9 +65,12 @@ export default function Hero() {
             direction={{ xs: 'column', sm: 'row' }}
             alignSelf="center"
             spacing={1}
+
+            // help to oversome limitation
             useFlexGap
             sx={{ pt: 2, width: { xs: '100%', sm: 'auto' } }}
           >
+            {/* textfield  */}
             <TextField
               id="outlined-basic"
               hiddenLabel
@@ -82,8 +87,11 @@ export default function Hero() {
               Start now
             </Button>
           </Stack>
+          
           <Typography variant="caption" textAlign="center" sx={{ opacity: 0.8 }}>
             By clicking &quot;Start now&quot; you agree to our&nbsp;
+
+            {/* link looks so nice  */}
             <Link href="#" color="primary">
               Terms & Conditions
             </Link>

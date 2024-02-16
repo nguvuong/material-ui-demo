@@ -14,6 +14,9 @@ export const brand = {
   900: '#021F3B',
 };
 
+
+
+
 export const secondary = {
   50: '#F9F0FF',
   100: '#E9CEFD',
@@ -368,8 +371,8 @@ export default function getLPTheme(mode) {
                   0.5,
                 )})`,
                 '&:hover': {
-                  borderColor: brand[700],
-                  boxShadow: `0 0 24px ${brand[800]}`,
+                  borderColor: green[700],
+                  boxShadow: `0 0 24px ${green[800]}`,
                 },
               }),
             }),
@@ -382,38 +385,38 @@ export default function getLPTheme(mode) {
             alignSelf: 'center',
             py: 1.5,
             px: 0.5,
-            background: `linear-gradient(to bottom right, ${brand[50]}, ${brand[100]})`,
+            background: `linear-gradient(to bottom right, ${green[50]}, ${green[100]})`,
             border: '1px solid',
-            borderColor: `${alpha(brand[500], 0.3)}`,
+            borderColor: `${alpha(green[500], 0.3)}`,
             fontWeight: '600',
             '&:hover': {
-              backgroundColor: brand[500],
+              backgroundColor: green[500],
             },
             '&:focus-visible': {
-              borderColor: brand[800],
-              backgroundColor: brand[200],
+              borderColor: green[800],
+              backgroundColor: green[200],
             },
             '& .MuiChip-label': {
-              color: brand[500],
+              color: green[500],
             },
             '& .MuiChip-icon': {
-              color: brand[500],
+              color: green[500],
             },
             ...(theme.palette.mode === 'dark' && {
-              background: `linear-gradient(to bottom right, ${brand[700]}, ${brand[900]})`,
-              borderColor: `${alpha(brand[500], 0.5)}`,
+              background: `linear-gradient(to bottom right, ${green[700]}, ${green[900]})`,
+              borderColor: `${alpha(green[500], 0.5)}`,
               '&:hover': {
-                backgroundColor: brand[600],
+                backgroundColor: green[600],
               },
               '&:focus-visible': {
-                borderColor: brand[200],
-                backgroundColor: brand[600],
+                borderColor: green[200],
+                backgroundColor: green[600],
               },
               '& .MuiChip-label': {
-                color: brand[200],
+                color: green[200],
               },
               '& .MuiChip-icon': {
-                color: brand[200],
+                color: green[200],
               },
             }),
           }),

@@ -13,6 +13,8 @@ import DevicesRoundedIcon from '@mui/icons-material/DevicesRounded';
 import EdgesensorHighRoundedIcon from '@mui/icons-material/EdgesensorHighRounded';
 import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
 
+
+// array to print out the information 
 const items = [
   {
     icon: <ViewQuiltRoundedIcon />,
@@ -52,6 +54,8 @@ export default function Features() {
   return (
     <Container id="features" sx={{ py: { xs: 8, sm: 16 } }}>
       <Grid container spacing={6}>
+
+        {/* in small devices, expand 12 column, in medium, expand 6 columns  */}
         <Grid item xs={12} md={6}>
           <div>
             <Typography component="h2" variant="h4" color="text.primary">
@@ -67,8 +71,12 @@ export default function Features() {
               of features, add-ons, or the benefits of the features.
             </Typography>
           </div>
+
+          {/* items map? for small device  */}
           <Grid container item gap={1} sx={{ display: { xs: 'auto', sm: 'none' } }}>
             {items.map(({ title }, index) => (
+
+              
               <Chip
                 key={index}
                 label={title}
@@ -76,9 +84,9 @@ export default function Features() {
                 sx={{
                   borderColor: (theme) => {
                     if (theme.palette.mode === 'light') {
-                      return selectedItemIndex === index ? 'primary.light' : '';
+                      return selectedItemIndex === index ? 'success.light' : '';
                     }
-                    return selectedItemIndex === index ? 'primary.light' : '';
+                    return selectedItemIndex === index ? 'success.light' : '';
                   },
                   background: (theme) => {
                     if (theme.palette.mode === 'light') {
@@ -86,7 +94,7 @@ export default function Features() {
                     }
                     return selectedItemIndex === index ? 'none' : '';
                   },
-                  backgroundColor: selectedItemIndex === index ? 'primary.main' : '',
+                  backgroundColor: selectedItemIndex === index ? 'success.main' : '',
                   '& .MuiChip-label': {
                     color: selectedItemIndex === index ? '#fff' : '',
                   },
@@ -102,6 +110,8 @@ export default function Features() {
               mt: 4,
             }}
           >
+
+            {/* this is for the image on the left  side  */}
             <Box
               sx={{
                 backgroundImage: (theme) =>
@@ -114,14 +124,18 @@ export default function Features() {
               }}
             />
             <Box sx={{ px: 2, pb: 2 }}>
+
+              {/* title and description  */}
               <Typography color="text.primary" variant="body2" fontWeight="bold">
                 {selectedFeature.title}
               </Typography>
               <Typography color="text.secondary" variant="body2" sx={{ my: 0.5 }}>
                 {selectedFeature.description}
               </Typography>
+
+              {/* transition of the link  */}
               <Link
-                color="primary"
+                color="success"
                 variant="body2"
                 fontWeight="bold"
                 sx={{
@@ -139,6 +153,8 @@ export default function Features() {
               </Link>
             </Box>
           </Box>
+
+          {/* for big device */}
           <Stack
             direction="column"
             justifyContent="center"
@@ -162,10 +178,10 @@ export default function Features() {
                   borderColor: (theme) => {
                     if (theme.palette.mode === 'light') {
                       return selectedItemIndex === index
-                        ? 'primary.light'
+                        ? 'success.light'
                         : 'grey.200';
                     }
-                    return selectedItemIndex === index ? 'primary.dark' : 'grey.800';
+                    return selectedItemIndex === index ? 'success.dark' : 'grey.800';
                   },
                 }}
               >
@@ -179,16 +195,17 @@ export default function Features() {
                     gap: 2.5,
                   }}
                 >
+                  {/* icon color */}
                   <Box
                     sx={{
                       color: (theme) => {
                         if (theme.palette.mode === 'light') {
                           return selectedItemIndex === index
-                            ? 'primary.main'
+                            ? 'success.main'
                             : 'grey.300';
                         }
                         return selectedItemIndex === index
-                          ? 'primary.main'
+                          ? 'success.main'
                           : 'grey.700';
                       },
                     }}
@@ -210,6 +227,8 @@ export default function Features() {
                     >
                       {description}
                     </Typography>
+
+                    {/* link is done */}
                     <Link
                       color="primary"
                       variant="body2"
@@ -236,6 +255,8 @@ export default function Features() {
             ))}
           </Stack>
         </Grid>
+
+        {/* this is the image on the right */}
         <Grid
           item
           xs={12}

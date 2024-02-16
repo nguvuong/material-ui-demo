@@ -261,11 +261,20 @@ function AppAppBar({ mode, toggleColorMode, props }) {
 
                     <Search>
                     <SearchIconWrapper>
-                    <SearchIcon />
+                    <SearchIcon
+                      sx={{
+                        color: (theme) =>
+                          theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',
+                      }} 
+                    />
                     </SearchIconWrapper>
                     <StyledInputBase
                     placeholder="Search…"
                     inputProps={{ 'aria-label': 'search' }}
+                    sx={{
+                      color: (theme) =>
+                        theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',
+                    }}
                     />
                 </Search>
                 <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
